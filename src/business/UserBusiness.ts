@@ -1,15 +1,18 @@
+import { Authenticator } from "../services/Authenticator";
+import { generateId } from "../services/generateID";
+import { HashManager } from "../services/HashManager";
 import { UserDatabase } from "../data/UserDatabase";
-import { InvalidEmail, InvalidPassword, InvalidRole,
-        NotNullEmail, NotNullName, NotNullPassword, NotNullRole } 
-from "../error/UserError";
 import { Role } from "../model/user/role";
 import { User } from "../model/user/user";
 import { UserInputDTO } from "../model/user/userInputDTO";
-import { Authenticator } from "../services/Authenticator";
-import { generateId } from "../services/generateID";
+import { InvalidEmail, InvalidPassword, InvalidRole,
+        NotNullEmail, NotNullName, NotNullPassword, NotNullRole } 
+from "../error/UserError";
 
-const userDatabase = new UserDatabase()
 const authenticator = new Authenticator()
+const userDatabase = new UserDatabase()
+const hashManager = new HashManager();
+
 
 export class UserBusiness{
     createUser =async (input:UserInputDTO) => {
@@ -36,15 +39,18 @@ export class UserBusiness{
 
         const id: string = generateId()
 
+        const hashPassword: string = await hashManager.hash(password)
+
         const user: User={
             id,
             name,
             email,
-            password,
+            password: hashPassword,
             role
         }
 
         await userDatabase.createUser(user)
+        
         const token = authenticator.generateToken({id, role})
         return token
     }
