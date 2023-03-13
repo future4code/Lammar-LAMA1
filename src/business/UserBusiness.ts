@@ -1,4 +1,8 @@
 import { UserDatabase } from "../data/UserDatabase";
+import { InvalidEmail, InvalidPassword, InvalidRole,
+        NotNullEmail, NotNullName, NotNullPassword, NotNullRole } 
+from "../error/UserError";
+import { Role } from "../model/user/role";
 import { User } from "../model/user/user";
 import { UserInputDTO } from "../model/user/userInputDTO";
 import { generateId } from "../services/generateID";
@@ -9,8 +13,22 @@ export class UserBusiness{
         
         const {name, email, password, role} = input;
 
-        if(!name && !email && !password && !role){
-            throw new Error("Insira o nome, email, password e role!")
+        if(!name){
+            throw new NotNullName()
+        }else if(!email){
+            throw new NotNullEmail()
+        }else if(!password){
+            throw new NotNullPassword()
+        }else if(!role){
+            throw new NotNullRole()
+        }else if(!email.includes("@")){
+            throw new InvalidEmail();
+        }else if(password.length <=6){
+            throw new InvalidPassword()
+        }
+
+        if(role.toUpperCase() != Role.ADMIN && role.toUpperCase() != Role.NORMAL){
+            throw new InvalidRole()
         }
 
         const generatedId: string = generateId()
