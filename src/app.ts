@@ -1,7 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import { AddressInfo } from 'net'
-import { userRoutes } from './routes/UserRoutes'
+import { userRoutes } from './routes/userRoutes'
 
 export const app = express()
 app.use(express.json())
