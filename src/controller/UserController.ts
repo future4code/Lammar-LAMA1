@@ -16,7 +16,7 @@ export class UserController{
 
             const response = userBusiness.createUser(input);
 
-            res.status(201).send(response)
+            res.status(201).send({message: "user created successfully", response})
 
         }catch(error:any){
             return res.status(error.statusCode).send({message: error.message})

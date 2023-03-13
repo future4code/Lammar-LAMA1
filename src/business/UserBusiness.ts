@@ -45,9 +45,7 @@ export class UserBusiness{
         }
 
         await userDatabase.createUser(user)
-
         const token = authenticator.generateToken({id, role})
-
         return token
     }
 }
