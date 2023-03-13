@@ -5,9 +5,12 @@ from "../error/UserError";
 import { Role } from "../model/user/role";
 import { User } from "../model/user/user";
 import { UserInputDTO } from "../model/user/userInputDTO";
+import { Authenticator } from "../services/Authenticator";
 import { generateId } from "../services/generateID";
 
 const userDatabase = new UserDatabase()
+const authenticator = new Authenticator()
+
 export class UserBusiness{
     createUser =async (input:UserInputDTO) => {
         
@@ -31,10 +34,10 @@ export class UserBusiness{
             throw new InvalidRole()
         }
 
-        const generatedId: string = generateId()
+        const id: string = generateId()
 
         const user: User={
-            id: generatedId,
+            id,
             name,
             email,
             password,
@@ -42,5 +45,9 @@ export class UserBusiness{
         }
 
         await userDatabase.createUser(user)
+
+        const token = authenticator.generateToken({id, role})
+
+        return token
     }
 }
