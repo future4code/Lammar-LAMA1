@@ -6,9 +6,10 @@ import { Role } from "../model/user/role";
 import { User } from "../model/user/user";
 import { UserInputDTO } from "../model/user/userInputDTO";
 import { InvalidEmail, InvalidPassword, InvalidRole,
-        NotNullEmail, NotNullName, NotNullPassword, NotNullRole } 
+        NotNullEmail, NotNullName, NotNullPassword, NotNullRole, UserNotFound } 
 from "../error/UserError";
 import { CustomError } from "../error/CustomError";
+import { Login } from "../model/user/login";
 
 const authenticator = new Authenticator()
 const userDatabase = new UserDatabase()
@@ -58,7 +59,44 @@ export class UserBusiness{
         }catch(error:any){
             throw new CustomError(error.message, 400)
         }
-
     }
+
+    login = async (input: Login) =>{
+        try{
+            const {email, password} = input;
+
+            if(!email){
+                throw new NotNullEmail()
+            }else if(!password){
+                throw new NotNullPassword()
+            }
+
+            if (!email.includes("@")) {
+                throw new InvalidEmail();
+              }
+
+            const user = await userDatabase.findUserByEmail(email);
+
+            if(!user){
+                throw new UserNotFound()
+            }
+
+            const isValidPassword: boolean = await hashManager.compare(
+                password,
+                user.password
+            );
+
+            if(!isValidPassword){
+                throw new InvalidPassword();
+                
+            }
+
+            const token = authenticator.generateToken({id: user.id, role:user.role})
+
+            return token
+        }catch(error:any){
+            throw new CustomError(error.message)
+        }
+    };
         
 }
