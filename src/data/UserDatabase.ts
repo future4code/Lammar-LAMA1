@@ -1,3 +1,4 @@
+import { CustomError } from "../error/CustomError";
 import { User } from "../model/user/user";
 import { BaseDatabase } from "./BaseDatabase";
 
@@ -14,6 +15,18 @@ export class UserDatabase extends BaseDatabase{
             }).into("USER_LAMA")
         }catch(error: any){
             throw new Error(error.message)
+        }
+    }
+
+    
+    findUserByEmail = async(email: string) =>{
+        try{
+            const result = await UserDatabase.connection("USER_LAMA")
+            .select().where({email})
+
+            return result[0]
+        }catch(error:any){
+            throw new CustomError(error.message)
         }
     }
 }
