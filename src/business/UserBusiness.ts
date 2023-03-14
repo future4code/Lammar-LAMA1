@@ -6,7 +6,7 @@ import { Role } from "../model/user/role";
 import { User } from "../model/user/user";
 import { UserInputDTO } from "../model/user/userInputDTO";
 import { InvalidEmail, InvalidPassword, InvalidRole,
-        NotNullEmail, NotNullName, NotNullPassword, NotNullRole, UserNotFound } 
+        NotNullEmail, NotNullName, NotNullPassword, NotNullRole, PasswordIncorrect, UserNotFound } 
 from "../error/UserError";
 import { CustomError } from "../error/CustomError";
 import { Login } from "../model/user/login";
@@ -87,7 +87,7 @@ export class UserBusiness{
             );
 
             if(!isValidPassword){
-                throw new InvalidPassword();
+                throw new PasswordIncorrect();
                 
             }
 
