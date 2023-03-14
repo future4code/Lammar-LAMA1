@@ -14,9 +14,9 @@ export class UserController{
                 role: req.body.role,
             };
 
-            const response = userBusiness.createUser(input);
+            const token = await userBusiness.createUser(input);
 
-            res.status(201).send(response)
+            res.status(201).send({message: "user created successfully",token})
 
         }catch(error:any){
             return res.status(error.statusCode).send({message: error.message})
