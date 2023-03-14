@@ -6,6 +6,11 @@ export class InvalidEmail extends CustomError{
     }
 }
 
+export class InvalidCredentials extends CustomError{ 
+    constructor(){
+        super("invalid credentials")
+    }
+}
 export class InvalidPassword extends CustomError{
     constructor(){
         super("password must be more than 6 characters.")
