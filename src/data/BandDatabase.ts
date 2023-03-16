@@ -1,5 +1,6 @@
-import { Unauthorized } from "../error/UserError";
+import { CustomError } from "../error/CustomError";
 import { Band } from "../model/band/band";
+import { GetBand } from "../model/band/getBand";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class BandDataBase extends BaseDatabase{
@@ -16,6 +17,22 @@ export class BandDataBase extends BaseDatabase{
 
         }catch(error:any){
             throw new Error(error.message)
+        }
+    }
+
+    getBand = async(input: GetBand)=>{
+        try{
+            const queryResult = await BandDataBase.connection("BAND")
+            .select("*")
+            .where({id: input.id})
+
+            if (queryResult.length <1){
+                throw new Error("Banda não localizada")
+            }
+
+            return queryResult[0]
+        }catch(error: any){
+            throw new CustomError(error.statusCode, error.message)
         }
     }
 }
