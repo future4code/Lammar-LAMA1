@@ -2,10 +2,10 @@ POST http://localhost:3003/user
 Content-Type: application/json
 
 {
-    "name": "User 1",
-    "email": "user1@gmail.com",
+    "name": "User 10",
+    "email": "user10@gmail.com",
     "password": "123456789",
-    "role": "NORMAL"
+    "role": "ADMIN"
 }
 
 ###
@@ -16,4 +16,15 @@ Content-Type: application/json
     "email": "use1@mail.com",
     "password": "123456789"
 }
+###
 
+POST http://localhost:3003/band
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMzZmUwY2UyLThkMGUtNDg2OS1iY2JkLWRhOTEzZDNlMWZmMSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2Nzg5OTg1NDIsImV4cCI6MTY3OTAxNjU0Mn0.k34R-n3V4Kqf_mcCc4C_x2cO0s3GWJelikQMdhtjD64
+
+{
+    "name": "Detonautas",
+    "music_genre": "Rock",
+    "responsible": "Tico Santa Cruz"
+
+}
