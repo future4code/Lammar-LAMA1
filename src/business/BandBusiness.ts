@@ -1,4 +1,5 @@
 import { BandDataBase } from "../data/BandDatabase";
+import { NotNullMusicGenre, NotNullName, NotNullResponsible } from "../error/BandError";
 import { CustomError } from "../error/CustomError";
 import { Band } from "../model/band/band";
 import { BandInputDTO } from "../model/band/bandInputDTO";
@@ -14,10 +15,13 @@ export class BandBusinees{
 
             const {name, music_genre, responsible} = input
 
-            if(!name && !music_genre && !responsible){
-                throw new Error("Insira o nome, genero da banda e o id da pessoa responsavel.")
+            if(!name){
+                throw new NotNullName()
+            }else if(!music_genre){
+                throw new NotNullMusicGenre()
+            }else if(!responsible){
+                throw new NotNullResponsible()
             }
-
             const generatedId: string = generateId()
             
             const band: Band={
