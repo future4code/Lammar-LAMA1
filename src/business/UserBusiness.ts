@@ -98,5 +98,4 @@ export class UserBusiness{
             throw new CustomError(error.message)
         }
     };
-        
 }
