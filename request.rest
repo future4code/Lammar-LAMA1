@@ -16,4 +16,15 @@ Content-Type: application/json
     "email": "user1@gmail.com",
     "password": "123456789"
 }
+###
 
+POST http://localhost:3003/band
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMzZmUwY2UyLThkMGUtNDg2OS1iY2JkLWRhOTEzZDNlMWZmMSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2Nzg5OTU1MDksImV4cCI6MTY3OTAxMzUwOX0.GiTygdG6dFmYka3Qz1d1QEn6ZsujH-ih49DtRJCkr4E
+
+{
+    "name": "Nx-Zero",
+    "music_genre": "Rock",
+    "responsible": "José"
+
+}
