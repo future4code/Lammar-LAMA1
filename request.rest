@@ -40,8 +40,8 @@ Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTAwMzgyNCwiZXhwIjoxNjc5MDIxODI0fQ.yS1Xx2FFWZSzV_phPSmih1w92GUFDt_8EpdG9ouU9uQ
 
 {
-    "week_day": "SUNDAY",
-    "start_time": 7,
-    "end_time": 10,
+    "week_day": "SATURDAY",
+    "start_time": 17,
+    "end_time": 11,
     "band_id":"09d37610-ebec-40b2-8f88-ce715d1d488c"
 }

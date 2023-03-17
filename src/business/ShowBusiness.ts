@@ -29,6 +29,11 @@ export class ShowBusiness{
                 throw new InvalidTime()
             }
 
+            if(start_time > end_time){
+                throw new Error("O show não pode começar depois do horário de encerramento.")
+            }
+
+
             const generatedId: string = generateId()
             
             const show: Show={

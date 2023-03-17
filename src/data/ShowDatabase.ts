@@ -5,6 +5,14 @@ export class ShowDatabse extends BaseDatabase{
     createShow = async(show: Show)=>{
         try{
 
+            const queryResult = await ShowDatabse.connection("BAND")
+            .select("*")
+            .where({id: show.band_id})
+
+            if(queryResult.length < 1){
+                throw new Error("Banda não localizada")
+            }
+
             await ShowDatabse.connection
             .insert({
                 id: show.id,
