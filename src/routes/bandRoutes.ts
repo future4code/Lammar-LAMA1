@@ -6,4 +6,4 @@ const bandController = new BandController();
 export const bandRoutes = express.Router();
 
 bandRoutes.post("", bandController.createBand)
-bandRoutes.get("/:id", bandController.getBand)
+bandRoutes.get("/:name", bandController.getBand)

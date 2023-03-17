@@ -39,7 +39,6 @@ export class BandController{
     getBand = async(req: Request, res: Response)=>{
         try{
             const input: GetBand={
-                id: req.params.id,
                 name: req.params.name,
                 token: req.headers.authorization as string
             }

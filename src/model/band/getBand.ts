@@ -1,5 +1,4 @@
 export type GetBand={
-    id: string,
-    name?:string,
+    name:string,
     token: string
 }
