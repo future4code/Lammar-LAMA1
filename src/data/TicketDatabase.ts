@@ -5,13 +5,22 @@ export class TicketDatabase extends BaseDatabase{
     createTicket = async(ticket: Ticket) =>{
         try{
 
+            const queryResult = await TicketDatabase.connection("SHOW")
+            .select("*")
+            .where({id: ticket.id_show})
+
+            if(queryResult.length <1){
+                throw new Error("Show não encontrado, verifique se o id está correto.")
+            }
+
             await TicketDatabase.connection
             .insert({
                 id: ticket.id,
                 name: ticket.name,
                 price: ticket.price,
                 qty_stock: ticket.qty_stock,
-                qty_sold: ticket.qty_sold
+                qty_sold: ticket.qty_sold,
+                id_show: ticket.id_show
             }).into("TICKET_LAMA")
 
         }catch(error:any){
