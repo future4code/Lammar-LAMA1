@@ -28,4 +28,5 @@ export class TicketDatabase extends BaseDatabase{
             throw new Error(error.message)
         }
     }
+
 }
