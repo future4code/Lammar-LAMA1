@@ -3,13 +3,15 @@ import cors from 'cors'
 import { AddressInfo } from 'net'
 import { userRoutes } from './routes/userRoutes'
 import { bandRoutes } from './routes/bandRoutes'
+import { showRoutes } from './routes/showRoutes'
 
 export const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.use("/user", userRoutes)
 app.use("/band", bandRoutes)
+app.use("/show", showRoutes)
+app.use("/user", userRoutes)
 
 
 const server = app.listen(process.env.PORT || 3003, () => {

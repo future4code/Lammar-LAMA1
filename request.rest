@@ -32,3 +32,16 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMt
 ###
 GET http://localhost:3003/band/6fefc501-5619-4eaa-9347-c733cd121acc
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTAwMzgyNCwiZXhwIjoxNjc5MDIxODI0fQ.yS1Xx2FFWZSzV_phPSmih1w92GUFDt_8EpdG9ouU9uQ
+
+###
+
+POST http://localhost:3003/show
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTAwMzgyNCwiZXhwIjoxNjc5MDIxODI0fQ.yS1Xx2FFWZSzV_phPSmih1w92GUFDt_8EpdG9ouU9uQ
+
+{
+    "week_day": "SUNDAY",
+    "start_time": 7,
+    "end_time": 10,
+    "band_id":"09d37610-ebec-40b2-8f88-ce715d1d488c"
+}
