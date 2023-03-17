@@ -1,3 +1,4 @@
+import { ShowNotFound } from "../error/TicketError";
 import { Ticket } from "../model/ticket/Ticket";
 import { BaseDatabase } from "./BaseDatabase";
 
@@ -10,7 +11,7 @@ export class TicketDatabase extends BaseDatabase{
             .where({id: ticket.id_show})
 
             if(queryResult.length <1){
-                throw new Error("Show não encontrado, verifique se o id está correto.")
+                throw new ShowNotFound()
             }
 
             await TicketDatabase.connection

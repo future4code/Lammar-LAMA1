@@ -21,4 +21,10 @@ export class NotNullIdShow extends CustomError{
     }
 }
 
+export class ShowNotFound extends CustomError{
+    constructor(){
+        super("show not found")
+    }
+}
+
 
