@@ -5,6 +5,11 @@ export class InvalidTime extends CustomError{
         super("invalid time.")
     }
 }
+export class InvalidStartTime extends CustomError{
+    constructor(){
+        super("start time cannot be greater than end time")
+    }
+}
 export class NotNullBandId extends CustomError{
     constructor(){
         super("band id is required.")
