@@ -1,5 +1,10 @@
 import { CustomError } from "./CustomError";
 
+export class BandNotFound extends CustomError{
+    constructor(){
+        super("band not found")
+    }
+}
 export class InvalidTime extends CustomError{
     constructor(){
         super("invalid time.")
