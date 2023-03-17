@@ -36,7 +36,7 @@ export class ShowController{
 
             const token = await showBusiness.createShow(input);
             
-            res.status(201).send({message: "show created successfully", token})
+            return res.status(201).send({message: "show created successfully", token})
             
         }catch(error:any){
             return res.status(error.statusCode).send({message: error.message})

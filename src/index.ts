@@ -4,6 +4,7 @@ import { AddressInfo } from 'net'
 import { userRoutes } from './routes/userRoutes'
 import { bandRoutes } from './routes/bandRoutes'
 import { showRoutes } from './routes/showRoutes'
+import { ticketRoutes } from './routes/ticketRoutes'
 
 export const app = express()
 app.use(express.json())
@@ -11,6 +12,7 @@ app.use(cors())
 
 app.use("/band", bandRoutes)
 app.use("/show", showRoutes)
+app.use("/ticket", ticketRoutes)
 app.use("/user", userRoutes)
 
 
