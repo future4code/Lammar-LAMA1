@@ -13,7 +13,7 @@ POST http://localhost:3003/user/login
 Content-Type: application/json
 
 {
-    "email": "user1@gmail.com",
+    "email": "user10@gmail.com",
     "password": "123456789"
 }
 ###
@@ -55,11 +55,11 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMt
 
 POST http://localhost:3003/ticket
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMzZmUwY2UyLThkMGUtNDg2OS1iY2JkLWRhOTEzZDNlMWZmMSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NzkwNjkxNjUsImV4cCI6MTY3OTA4NzE2NX0.OOb66H9aVknKFfT8gl0rNcZbh4ci7HUR9Gv0Qvcvtw4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTA4NjExNSwiZXhwIjoxNjc5MTA0MTE1fQ.ZDXKRBAymdlEOowf45mcC0BfidRq86Hxq-tXdHEGM8I
 
 {
-    "name": "Show banda Detonautas",
-    "price": 120.00,
+    "name": "Show da Pitty",
+    "price": 130.00,
     "qty_stock": 300,
-    "id_show": "c1607349-fa9a-4f36-8f62-d867d1dcd84d"
+    "id_show": "3d5bd014-ccc2-4726-b6aa-cc04523274d2"
 }
