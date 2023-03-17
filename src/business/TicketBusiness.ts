@@ -39,4 +39,5 @@ export class TicketBusiness{
             throw new CustomError(error.message, 400);
         }
     }
+
 }

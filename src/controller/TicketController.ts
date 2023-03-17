@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { TicketBusiness } from "../business/TicketBusiness";
 import { Unauthorized } from "../error/UserError";
+import { BuyTicketDTO } from "../model/ticket/BuyTicketDTO";
 import { TicketInputDTO } from "../model/ticket/TicketInputDTO";
 import { Role } from "../model/user/role";
 import { Authenticator } from "../services/Authenticator";
