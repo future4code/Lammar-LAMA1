@@ -35,4 +35,9 @@ export class NotNullWeekDay extends CustomError{
         super("week day is required.")
     }
 }
+export class NoShowScheduled extends CustomError{
+    constructor(){
+        super("no shows scheduled for that day.")
+    }
+}
 
