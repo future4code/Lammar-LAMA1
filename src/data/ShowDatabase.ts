@@ -1,3 +1,4 @@
+import { BandNotFound } from "../error/ShowError";
 import { Show } from "../model/show/show";
 import { BaseDatabase } from "./BaseDatabase";
 
@@ -10,7 +11,7 @@ export class ShowDatabse extends BaseDatabase{
             .where({id: show.band_id})
 
             if(queryResult.length < 1){
-                throw new Error("Banda não localizada")
+                throw new BandNotFound()
             }
 
             await ShowDatabse.connection

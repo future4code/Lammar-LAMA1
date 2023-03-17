@@ -1,6 +1,6 @@
 import { ShowDatabse } from "../data/ShowDatabase";
 import { CustomError } from "../error/CustomError";
-import { InvalidTime, NotNullBandId, NotNullEndTime, NotNullStartTime, NotNullWeekDay } from "../error/ShowError";
+import { InvalidStartTime, InvalidTime, NotNullBandId, NotNullEndTime, NotNullStartTime, NotNullWeekDay } from "../error/ShowError";
 import { Show } from "../model/show/show";
 import { ShowInputDTO } from "../model/show/showInputDTO";
 import { generateId } from "../services/generateID";
@@ -30,7 +30,7 @@ export class ShowBusiness{
             }
 
             if(start_time > end_time){
-                throw new Error("O show não pode começar depois do horário de encerramento.")
+                throw new InvalidStartTime()
             }
 
 
