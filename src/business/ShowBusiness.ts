@@ -7,7 +7,7 @@ import { generateId } from "../services/generateID";
 const showDatabase = new ShowDatabse()
 
 export class ShowBusiness{
-    createBand = async(input: ShowInputDTO)=>{
+    createShow = async(input: ShowInputDTO)=>{
         try{
 
             const {week_day, start_time, end_time, band_id} = input

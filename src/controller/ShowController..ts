@@ -30,7 +30,7 @@ export class ShowController{
                 return res.status(400).send({message: "there will be no show that day of the week"})
             }
 
-            const token = await showBusiness.createBand(input);
+            const token = await showBusiness.createShow(input);
             
             res.status(201).send({message: "show created successfully", token})
             
