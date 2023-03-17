@@ -13,7 +13,7 @@ POST http://localhost:3003/user/login
 Content-Type: application/json
 
 {
-    "email": "user1@gmail.com",
+    "email": "user10@gmail.com",
     "password": "123456789"
 }
 ###
@@ -55,7 +55,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMt
 
 POST http://localhost:3003/ticket
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMzZmUwY2UyLThkMGUtNDg2OS1iY2JkLWRhOTEzZDNlMWZmMSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NzkwNjkxNjUsImV4cCI6MTY3OTA4NzE2NX0.OOb66H9aVknKFfT8gl0rNcZbh4ci7HUR9Gv0Qvcvtw4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTA2OTM3MSwiZXhwIjoxNjc5MDg3MzcxfQ.olUptquxNTlAGFZJP56heJ-O8sFhCz4PTWSwGWAUYPc
 
 {
     "name": "Show banda Detonautas",

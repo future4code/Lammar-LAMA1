@@ -25,9 +25,9 @@ export class TicketController{
                 throw new Unauthorized()
             }
 
-            const token = await ticketBusiness.createTicket(input);
+            const ticket = await ticketBusiness.createTicket(input);
 
-            return res.status(201).send({message: "ticket created successfully", token})
+            return res.status(201).send({message: "ticket created successfully", ticket})
         }catch(error: any){
             return res.status(error.statusCode).send({message: error.message})
         }
