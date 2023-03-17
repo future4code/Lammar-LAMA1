@@ -13,7 +13,7 @@ POST http://localhost:3003/user/login
 Content-Type: application/json
 
 {
-    "email": "user10@gmail.com",
+    "email": "user1@gmail.com",
     "password": "123456789"
 }
 ###
@@ -37,12 +37,12 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMt
 
 POST http://localhost:3003/show
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTAwMzgyNCwiZXhwIjoxNjc5MDIxODI0fQ.yS1Xx2FFWZSzV_phPSmih1w92GUFDt_8EpdG9ouU9uQ
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTA2ODkyOCwiZXhwIjoxNjc5MDg2OTI4fQ.b0IYoFa97OTkseI-DZO4SfBnq17kVonOEPyZm6k9kVA
 
 {
     "week_day": "SATURDAY",
-    "start_time": 17,
-    "end_time": 11,
+    "start_time": 20,
+    "end_time": 22,
     "band_id":"09d37610-ebec-40b2-8f88-ce715d1d488c"
 }
 
@@ -50,3 +50,16 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMt
 
 GET http://localhost:3003/show/SATURDAY
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTAyMjAxMiwiZXhwIjoxNjc5MDQwMDEyfQ.F9lInfq5Jt_m15pnLwBjnX4wtrvw84N4KMS2IIV_csA
+
+###
+
+POST http://localhost:3003/ticket
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMzZmUwY2UyLThkMGUtNDg2OS1iY2JkLWRhOTEzZDNlMWZmMSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NzkwNjkxNjUsImV4cCI6MTY3OTA4NzE2NX0.OOb66H9aVknKFfT8gl0rNcZbh4ci7HUR9Gv0Qvcvtw4
+
+{
+    "name": "Show banda Detonautas",
+    "price": 120.00,
+    "qty_stock": 300,
+    "id_show": "c1607349-fa9a-4f36-8f62-d867d1dcd84d"
+}

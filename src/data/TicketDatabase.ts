@@ -5,7 +5,7 @@ export class TicketDatabase extends BaseDatabase{
     createTicket = async(ticket: Ticket) =>{
         try{
 
-            const queryResult = await TicketDatabase.connection("SHOW")
+            const queryResult = await TicketDatabase.connection("SHOWS")
             .select("*")
             .where({id: ticket.id_show})
 
