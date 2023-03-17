@@ -1,5 +1,6 @@
 import { ShowDatabse } from "../data/ShowDatabase";
 import { CustomError } from "../error/CustomError";
+import { InvalidTime, NotNullBandId, NotNullEndTime, NotNullStartTime, NotNullWeekDay } from "../error/ShowError";
 import { Show } from "../model/show/show";
 import { ShowInputDTO } from "../model/show/showInputDTO";
 import { generateId } from "../services/generateID";
@@ -12,14 +13,20 @@ export class ShowBusiness{
 
             const {week_day, start_time, end_time, band_id} = input
 
-            if(!week_day && !start_time && !end_time && !band_id){
-                throw new Error("Insira o week_day, start_time, end_time e band_id")
+            if(!week_day){
+                throw new NotNullWeekDay()
+            }else if(!start_time){
+                throw new NotNullStartTime()
+            }else if(!end_time){
+                throw new NotNullEndTime()
+            }else if(!band_id){
+                throw new NotNullBandId()
             }
 
             if(start_time < 8 || start_time > 23  ){
-                throw new Error("Horário inválido")
+                throw new InvalidTime()
             }else if(end_time <8 || end_time > 23){
-                throw new Error("Horário inválido")
+                throw new InvalidTime()
             }
 
             const generatedId: string = generateId()
