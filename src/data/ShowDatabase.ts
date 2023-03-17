@@ -1,5 +1,5 @@
 import { CustomError } from "../error/CustomError";
-import { BandNotFound } from "../error/ShowError";
+import { BandNotFound, NoShowScheduled } from "../error/ShowError";
 import { getShow } from "../model/show/getShow";
 import { Show } from "../model/show/show";
 import { BaseDatabase } from "./BaseDatabase";
@@ -38,7 +38,7 @@ export class ShowDatabse extends BaseDatabase{
             .where({week_day: input.week_day})
 
             if(queryResult.length <1){
-                throw new Error("Nenhum show foi programado para esse dia.")
+                throw new NoShowScheduled()
             }
 
             return queryResult[0]
