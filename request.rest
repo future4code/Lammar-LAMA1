@@ -20,12 +20,12 @@ Content-Type: application/json
 
 POST http://localhost:3003/band
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTAwMzgyNCwiZXhwIjoxNjc5MDIxODI0fQ.yS1Xx2FFWZSzV_phPSmih1w92GUFDt_8EpdG9ouU9uQ
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTA5NzU2OSwiZXhwIjoxNjc5MTE1NTY5fQ.-HGsNQLndHa1M98rovOVVxuHJ4sejcv5Lvaq173Mbqo
 
 {
-    "name": "Detonautas",
+    "name": "Charlie Brown Jr",
     "music_genre": "Rock",
-    "responsible": "Tico Santa Cruz"
+    "responsible": "Chorão"
 
 }
 
