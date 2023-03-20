@@ -30,7 +30,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMt
 }
 
 ###
-GET http://localhost:3003/band/Pitty
+GET https://lama1.onrender.com/band/Pitty
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTAwMzgyNCwiZXhwIjoxNjc5MDIxODI0fQ.yS1Xx2FFWZSzV_phPSmih1w92GUFDt_8EpdG9ouU9uQ
 
 ###
@@ -61,13 +61,4 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMt
     "price": 130.00,
     "qty_stock": 300,
     "id_show": "3d5bd014-ccc2-4726-b6aa-cc04523274d2"
-}
-
-###
-POST http://localhost:3003/ticket/buy
-Content-Type: application/json
-
-{
-    "name": "Show da Pitty",
-    "qty_stock": 3,
 }
