@@ -45,6 +45,7 @@ export class ShowBusiness{
             }
             
             await showDatabase.createShow(show)
+            return show
             
         }catch(error:any){
             throw new CustomError(error.message, 400);

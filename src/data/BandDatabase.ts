@@ -24,8 +24,6 @@ export class BandDataBase extends BaseDatabase{
                 responsible: band.responsible
             }).into("BAND")
 
-            console.log(queryResult)
-
 
         }catch(error:any){
             throw new Error(error.message)
