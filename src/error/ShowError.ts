@@ -15,6 +15,11 @@ export class InvalidStartTime extends CustomError{
         super("start time cannot be greater than end time")
     }
 }
+export class NotAvailable extends CustomError{
+    constructor(){
+        super("there is already a show scheduled for that day and time.")
+    }
+}
 export class NotNullBandId extends CustomError{
     constructor(){
         super("band id is required.")
