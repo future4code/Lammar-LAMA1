@@ -16,6 +16,17 @@ export class ShowDatabse extends BaseDatabase{
                 throw new BandNotFound()
             }
 
+
+             const toCheck = await ShowDatabse.connection("SHOWS")
+            .select("*")
+            .where({week_day: show.week_day})
+            .andWhere({start_time: show.start_time})
+
+            if(toCheck.length > 0){
+                throw new Error("Já existe um show programado para esse dia e horário.")
+            }
+
+
             await ShowDatabse.connection
             .insert({
                 id: show.id,

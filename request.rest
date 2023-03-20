@@ -2,8 +2,8 @@ POST http://localhost:3003/user
 Content-Type: application/json
 
 {
-    "name": "User 10",
-    "email": "user10@gmail.com",
+    "name": "User 33",
+    "email": "user33@gmail.com",
     "password": "123456789",
     "role": "ADMIN"
 }
@@ -20,12 +20,12 @@ Content-Type: application/json
 
 POST http://localhost:3003/band
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTA5NzU2OSwiZXhwIjoxNjc5MTE1NTY5fQ.-HGsNQLndHa1M98rovOVVxuHJ4sejcv5Lvaq173Mbqo
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTMzNjc3OCwiZXhwIjoxNjc5MzU0Nzc4fQ.hHrdh8zFSKDHw_C7x565VJE0zwjQV-udN816Z040yk4
 
 {
-    "name": "Charlie Brown Jr",
-    "music_genre": "Rock",
-    "responsible": "Chorão"
+    "name": "Grupo menos é mais",
+    "music_genre": "Pagode",
+    "responsible": "Duzão"
 
 }
 
@@ -37,13 +37,13 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMt
 
 POST http://localhost:3003/show
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTA2ODkyOCwiZXhwIjoxNjc5MDg2OTI4fQ.b0IYoFa97OTkseI-DZO4SfBnq17kVonOEPyZm6k9kVA
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTMzNzQyNywiZXhwIjoxNjc5MzU1NDI3fQ.vy4LbDThDFAf6bvNq0OF0FtF0geNaTWnlSeXwnLqKJQ
 
 {
     "week_day": "SATURDAY",
-    "start_time": 20,
-    "end_time": 22,
-    "band_id":"09d37610-ebec-40b2-8f88-ce715d1d488c"
+    "start_time": 22,
+    "end_time": 23,
+    "band_id":"c8f0c679-a1f1-47c5-bd63-6b438ce3e1ff"
 }
 
 ###
