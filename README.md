@@ -7,7 +7,6 @@
     <li>
         <p><strong>Create new user</p></strong>
     </li>
-    <p>Cria um novo usuário no banco de dados.</p>
     <p><strong>Método:</strong> POST </p>
     <p> <strong>URL: </strong> /user </p>
     <strong> body: </strong>
@@ -29,6 +28,7 @@
     <p><strong>Método:</strong> POST </p>
     <p> <strong>URL: </strong> /band </p>
     <p> <strong>Headers: </strong> Authorization (token gerado no login) </p>
+    <p>Apenas usuários com role tipo <strong>ADMIN</strong> conseguem cadastrar uma nova banda.</p>
     <h2></h2>
     <img src="https://user-images.githubusercontent.com/102433664/226187820-5acb6e55-dd78-4ea0-a91e-479dd11b9dc3.png" />
     <h1></h1>
@@ -38,8 +38,35 @@
     <p><strong>Método:</strong> GET </p>
     <p> <strong>URL: </strong> /band/:name </p>
     <p> <strong>Headers: </strong> Authorization (token gerado no login) </p>
-
-    
+     <li>
+        <p><strong>Create new Show</p></strong>
+    </li>
+    <p><strong>Método:</strong> POST </p>
+    <p> <strong>URL: </strong> /show </p>
+    <strong> body: </strong>
+    <h2></h2>
+    <img src=https://user-images.githubusercontent.com/102433664/226370996-db1d3e6f-fad8-4a61-a35f-7b2af8010737.png" />
+    <h1></h1>
+    <p> <strong>Headers: </strong> Authorization (token gerado no login) </p>
+    <p>Apenas usuários com role tipo <strong>ADMIN</strong> conseguem cadastrar uma nova banda.</p>
+    <li>
+        <p><strong>Get Schedule Per Day</p></strong>
+    </li>
+    <p><strong>Método:</strong> GET </p>
+    <p> <strong>URL: </strong> /show/:week_day </p>
+    <p> <strong>Headers: </strong> Authorization (token gerado no login) </p>
+    <h1></h1>
+    <li>
+        <p><strong>Create new Ticket</p></strong>
+    </li>
+    <p><strong>Método:</strong> POST </p>
+    <p> <strong>URL: </strong> /ticket </p>
+    <strong> body: </strong>
+    <h2></h2>
+    <img src=https://user-images.githubusercontent.com/102433664/226371781-8f3c8017-628a-41cd-9a0c-06e041de9b47.png" />
+    <h1></h1>
+    <p> <strong>Headers: </strong> Authorization (token gerado no login) </p>
+    <p>Apenas usuários com role tipo <strong>ADMIN</strong> conseguem cadastrar uma nova banda.</p>
 </ol>
 
 
