@@ -9,6 +9,7 @@
     </li>
     <p><strong>Método:</strong> POST </p>
     <p> <strong>URL: </strong> /user </p>
+    <p> No campo role é permitido apenas duas opção: <strong>ADMIN</strong> ou <strong>NORMAL</strong>.</p>
     <strong> body: </strong>
     <p></p>
     <img src="https://user-images.githubusercontent.com/102433664/226187295-cbe6c767-c3de-4374-8b3d-03845de00fad.png" />
@@ -47,6 +48,7 @@
     <p> <strong>URL: </strong> /show </p>
     <p> <strong>Headers: </strong> Authorization (token gerado no login) </p>
     <p>Apenas usuários com role tipo <strong>ADMIN</strong> conseguem cadastrar uma nova banda.</p>
+    <p>O festival acontece apenas na sexta(<strong>friday</strong>), sábado(<strong>saturday</strong>) e domingo(<strong>sunday</strong>), insira uma dessas opção no week_day.</p>
     <strong> body: </strong>
     <p></p>
     <img src="https://user-images.githubusercontent.com/102433664/226370996-db1d3e6f-fad8-4a61-a35f-7b2af8010737.png" />
