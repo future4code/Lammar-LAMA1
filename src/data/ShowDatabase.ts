@@ -1,5 +1,5 @@
 import { CustomError } from "../error/CustomError";
-import { BandNotFound, NoShowScheduled } from "../error/ShowError";
+import { BandNotFound, NoShowScheduled, NotAvailable } from "../error/ShowError";
 import { getShow } from "../model/show/getShow";
 import { Show } from "../model/show/show";
 import { BaseDatabase } from "./BaseDatabase";
@@ -23,7 +23,7 @@ export class ShowDatabse extends BaseDatabase{
             .andWhere({start_time: show.start_time})
 
             if(toCheck.length > 0){
-                throw new Error("Já existe um show programado para esse dia e horário.")
+                throw new NotAvailable()
             }
 
 
