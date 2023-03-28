@@ -1,0 +1,64 @@
+POST http://localhost:3003/user
+Content-Type: application/json
+
+{
+    "name": "User 33",
+    "email": "user33@gmail.com",
+    "password": "123456789",
+    "role": "ADMIN"
+}
+
+###
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+    "email": "user10@gmail.com",
+    "password": "123456789"
+}
+###
+
+POST http://localhost:3003/band
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTMzNjc3OCwiZXhwIjoxNjc5MzU0Nzc4fQ.hHrdh8zFSKDHw_C7x565VJE0zwjQV-udN816Z040yk4
+
+{
+    "name": "Grupo menos é mais",
+    "music_genre": "Pagode",
+    "responsible": "Duzão"
+
+}
+
+###
+GET https://lama1.onrender.com/band/Pitty
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTAwMzgyNCwiZXhwIjoxNjc5MDIxODI0fQ.yS1Xx2FFWZSzV_phPSmih1w92GUFDt_8EpdG9ouU9uQ
+
+###
+
+POST http://localhost:3003/show
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTMzNzQyNywiZXhwIjoxNjc5MzU1NDI3fQ.vy4LbDThDFAf6bvNq0OF0FtF0geNaTWnlSeXwnLqKJQ
+
+{
+    "week_day": "SATURDAY",
+    "start_time": 22,
+    "end_time": 23,
+    "band_id":"c8f0c679-a1f1-47c5-bd63-6b438ce3e1ff"
+}
+
+###
+
+GET http://localhost:3003/show/SATURDAY
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTAyMjAxMiwiZXhwIjoxNjc5MDQwMDEyfQ.F9lInfq5Jt_m15pnLwBjnX4wtrvw84N4KMS2IIV_csA
+
+###
+POST http://localhost:3003/ticket
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZmM0ZDkxLTQ4MjMtNDAzYy1iYWU3LWYyNWY3OTcwNDBhNyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3OTA4NjExNSwiZXhwIjoxNjc5MTA0MTE1fQ.ZDXKRBAymdlEOowf45mcC0BfidRq86Hxq-tXdHEGM8I
+
+{
+    "name": "Show da Pitty",
+    "price": 130.00,
+    "qty_stock": 300,
+    "id_show": "3d5bd014-ccc2-4726-b6aa-cc04523274d2"
+}
